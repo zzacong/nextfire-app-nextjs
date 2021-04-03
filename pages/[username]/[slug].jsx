@@ -1,3 +1,4 @@
+import NextLink from 'next/link'
 import { useDocumentData } from 'react-firebase-hooks/firestore'
 import styles from '../../styles/Post.module.css'
 import PostContent from '../../components/PostContent'
@@ -6,6 +7,8 @@ import {
   getUserWithUsername,
   postToJSON,
 } from '../../lib/helpers/firebaseHelper'
+import AuthCheck from '../../components/AuthCheck'
+import HeartButton from '../../components/HeartButton'
 
 export default function Post(props) {
   const postRef = firestore.doc(props.path)
@@ -23,6 +26,15 @@ export default function Post(props) {
         <p>
           <strong>{post.heartCount ?? 0} 🤍</strong>
         </p>
+        <AuthCheck
+          fallback={
+            <NextLink href="/enter">
+              <button>💗 Sign Up</button>
+            </NextLink>
+          }
+        >
+          <HeartButton postRef={postRef} />
+        </AuthCheck>
       </aside>
     </main>
   )

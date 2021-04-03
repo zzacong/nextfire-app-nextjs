@@ -8,6 +8,7 @@ import toast, { Toaster } from 'react-hot-toast'
 
 import styles from '../../styles/Admin.module.css'
 import AuthCheck from '../../components/AuthCheck'
+import ImageUploader from '../../components/ImageUploader'
 import { auth, firestore } from '../../lib/config/firebase'
 import { serverTimestamp } from '../../lib/helpers/firebaseHelper'
 
@@ -91,6 +92,7 @@ function PostForm({ postRef, defaultValues, preview }) {
       )}
 
       <div className={preview ? styles.hidden : styles.controls}>
+        <ImageUploader />
         <textarea
           {...register('content', {
             maxLength: { value: 20000, message: 'content is too long' },
