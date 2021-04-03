@@ -5,7 +5,7 @@ import PostFeed from '../components/PostFeed'
 import { firestore } from '../lib/config/firebase'
 import { fromMillis, postToJSON } from '../lib/helpers/firebaseHelper'
 
-const LIMIT = 1
+const LIMIT = 10
 
 export default function Home(props) {
   const [posts, setPosts] = useState(props.posts)
