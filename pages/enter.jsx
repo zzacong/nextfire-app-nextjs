@@ -36,9 +36,11 @@ function SignInButton() {
     </button>
   )
 }
+
 function SignOutButton() {
   return <button onClick={() => auth.signOut()}>Sign Out</button>
 }
+
 function UsernameForm() {
   const [formValue, setFormValue] = useState('')
   const [isValid, setIsValid] = useState(false)

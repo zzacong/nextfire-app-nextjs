@@ -21,6 +21,11 @@ export default function Navbar() {
               </NextLink>
             </li>
             <li>
+              <NextLink href="/enter">
+                <button>Sign Out</button>
+              </NextLink>
+            </li>
+            <li>
               <NextLink href={`/${username}`}>
                 <img
                   src={user?.photoURL || '/hacker.png'}

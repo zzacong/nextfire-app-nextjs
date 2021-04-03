@@ -21,8 +21,8 @@ service cloud.firestore {
       match /users/{userId}/posts/{postId} {
         allow read;
         allow create: if canCreatePost(userId);
-        allow update: if canUpdatePost(userId) || canIncrementHearts(userid, postId);
-        allow delete: if request.auth.uid == user.id;
+        allow update: if canUpdatePost(userId) || canIncrementHearts(userId, postId);
+        allow delete: if request.auth.uid == userId;
       }
 
       match /users/{userId}/posts/{postId}/hearts/{heartId} {

@@ -1,9 +1,9 @@
-import UserProfile from '../../components/UserProfile'
-import PostFeed from '../../components/PostFeed'
 import {
   getUserWithUsername,
   postToJSON,
 } from '../../lib/helpers/firebaseHelper'
+import UserProfile from '../../components/UserProfile'
+import PostFeed from '../../components/PostFeed'
 
 export default function UserProfilePage({ user, posts }) {
   return (
