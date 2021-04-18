@@ -6,11 +6,11 @@ import { useForm } from 'react-hook-form'
 import ReactMarkdown from 'react-markdown'
 import toast, { Toaster } from 'react-hot-toast'
 
-import styles from '../../styles/Admin.module.css'
-import AuthCheck from '../../components/AuthCheck'
-import ImageUploader from '../../components/ImageUploader'
-import { auth, firestore } from '../../lib/config/firebase'
-import { serverTimestamp } from '../../lib/helpers/firebaseHelper'
+import styles from '@styles/Admin.module.css'
+import AuthCheck from '@components/AuthCheck'
+import ImageUploader from '@components/ImageUploader'
+import { auth, firestore } from '@lib/config/firebase'
+import { serverTimestamp } from '@lib/helpers/firebaseHelper'
 
 export default function AdminPostEdit() {
   return (

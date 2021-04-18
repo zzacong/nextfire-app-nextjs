@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import { useState } from 'react'
-import Loader from '../components/Loader'
-import PostFeed from '../components/PostFeed'
-import { firestore } from '../lib/config/firebase'
-import { fromMillis, postToJSON } from '../lib/helpers/firebaseHelper'
+import Loader from '@components/Loader'
+import PostFeed from '@components/PostFeed'
+import { firestore } from '@lib/config/firebase'
+import { fromMillis, postToJSON } from '@lib/helpers/firebaseHelper'
 
 const LIMIT = 10
 
@@ -44,7 +44,7 @@ export default function Home(props) {
   return (
     <main>
       <Head>
-        <title>NextFire App | Nextjs</title>
+        <title>NextFire | Nextjs</title>
       </Head>
 
       <PostFeed posts={posts} />

@@ -1,14 +1,11 @@
 import NextLink from 'next/link'
 import { useDocumentData } from 'react-firebase-hooks/firestore'
-import styles from '../../styles/Post.module.css'
-import PostContent from '../../components/PostContent'
-import { firestore } from '../../lib/config/firebase'
-import {
-  getUserWithUsername,
-  postToJSON,
-} from '../../lib/helpers/firebaseHelper'
-import AuthCheck from '../../components/AuthCheck'
-import HeartButton from '../../components/HeartButton'
+import styles from '@styles/Post.module.css'
+import PostContent from '@components/PostContent'
+import { firestore } from '@lib/config/firebase'
+import { getUserWithUsername, postToJSON } from '@lib/helpers/firebaseHelper'
+import AuthCheck from '@components/AuthCheck'
+import HeartButton from '@components/HeartButton'
 
 export default function Post(props) {
   const postRef = firestore.doc(props.path)

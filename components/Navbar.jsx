@@ -1,6 +1,6 @@
 import NextLink from 'next/link'
 import { useContext } from 'react'
-import { UserContext } from '../lib/context/UserContext'
+import { UserContext } from '@lib/context/UserContext'
 
 export default function Navbar() {
   const { user, username } = useContext(UserContext)

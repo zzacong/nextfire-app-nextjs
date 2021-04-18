@@ -1,7 +1,7 @@
 import { useEffect, useState, useContext, useCallback } from 'react'
 import { debounce } from 'lodash'
-import { auth, firestore, googleAuthProvider } from '../lib/config/firebase'
-import { UserContext } from '../lib/context/UserContext'
+import { auth, firestore, googleAuthProvider } from '@lib/config/firebase'
+import { UserContext } from '@lib/context/UserContext'
 
 export default function EnterPage({}) {
   const { user, username } = useContext(UserContext)

@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { auth, storage, STATE_CHANGED } from '../lib/config/firebase'
-import Loader from '../components/Loader'
+import { auth, storage, STATE_CHANGED } from '@lib/config/firebase'
+import Loader from '@components/Loader'
 
 export default function ImageUploader() {
   const [uploading, setUploading] = useState(false)

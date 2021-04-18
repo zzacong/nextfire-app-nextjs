@@ -4,12 +4,12 @@ import kebabCase from 'lodash.kebabcase'
 import toast, { Toaster } from 'react-hot-toast'
 import { useCollection } from 'react-firebase-hooks/firestore'
 
-import { UserContext } from '../../lib/context/UserContext'
-import AuthCheck from '../../components/AuthCheck'
-import Metatags from '../../components/Metatags'
-import PostFeed from '../../components/PostFeed'
-import { firestore, auth } from '../../lib/config/firebase'
-import { serverTimestamp } from '../../lib/helpers/firebaseHelper'
+import { UserContext } from '@lib/context/UserContext'
+import AuthCheck from '@components/AuthCheck'
+import Metatags from '@components/Metatags'
+import PostFeed from '@components/PostFeed'
+import { firestore, auth } from '@lib/config/firebase'
+import { serverTimestamp } from '@lib/helpers/firebaseHelper'
 
 export default function AdminPostPage() {
   return (
