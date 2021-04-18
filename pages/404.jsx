@@ -9,7 +9,7 @@ export default function Custom404() {
         width="480"
         height="365"
         frameBorder="0"
-        allowfullscreen
+        allowFullScreen
       ></iframe>
       <NextLink href="/">
         <button className="btn-blue">Go home</button>
