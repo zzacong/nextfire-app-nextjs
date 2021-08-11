@@ -1,5 +1,5 @@
 import { createContext } from 'react'
-import useUserData from '../hooks/useUserData'
+import useUserData from '@hooks/useUserData'
 
 export const UserContext = createContext({ user: null, username: null })
 
